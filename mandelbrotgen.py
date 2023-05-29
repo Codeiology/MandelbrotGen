@@ -89,20 +89,20 @@ plt.xlabel("Re")
 plt.ylabel("Im")
 time.sleep(1)
 print("Render completed!")
-print("")
 while True:
-    viewordown = input("Would you like to view this render temporarily or download the render? (view/down): ")
-    print("")
-    if viewordown == "view":
-	    print("Viewing (close window to go back to program)...")
-	    plt.show()
-    elif viewordown == "down":
-	    output_file = input("Name for new image? ")
-	    dpistr = input("DPI (Dots Per Inch. Determines image quality. Recommended: 500 - 800): ")
-	    dpi = int(dpistr)
-	    plt.savefig(output_file, dpi=dpi)
-	    print("")
-	    print(f"Render saved as {output_file}")
-	    sys.exit()
-    else:
-	    print("Invalid. Type either 'view', or 'down'")
+	print("")
+	viewordown = input("Would you like to view this render temporarily or download the render? (view/down): ")
+	print("")
+	if viewordown == "view":
+		print("Viewing (close window to go back to program)...")
+		plt.show()
+	elif viewordown == "down":
+		output_file = input("Name for new image? ")
+		dpistr = input("DPI (Dots Per Inch. Determines image quality. Recommended: 500 - 800): ")
+		dpi = int(dpistr)
+		plt.savefig(output_file, dpi=dpi)
+		print("")
+		print(f"Render saved as {output_file}")
+		sys.exit()
+	else:
+		print("Invalid. Type either 'view', or 'down'")
