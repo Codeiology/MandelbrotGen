@@ -6,4 +6,5 @@ Super fast, super beautiful, super detailed!
 # Setup
 
 `pip3 install -r requirements.txt`
+
 `python3 mandelbrotgen.py`
