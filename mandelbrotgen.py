@@ -39,6 +39,7 @@ yoffsetstr = input("Y axis offset: ")
 y_offset = float(yoffsetstr)
 maxiterstr = input("Max iterations: ")
 max_iter = int(maxiterstr)
+colormap = input("MatPlotLib colormap to use: ")
 
 print("")
 print("Generating render... ")
@@ -49,7 +50,7 @@ image = generate_mandelbrot(width, height, zoom, x_offset, y_offset, max_iter)
 
 # Plotting the Mandelbrot set
 plt.figure(figsize=(10, 10))
-plt.imshow(image.T, cmap='hot', extent=[-2.5 / zoom - x_offset, 1.5 / zoom - x_offset, -1.5 / zoom - y_offset, 1.5 / zoom - y_offset])
+plt.imshow(image.T, cmap=f'{colormap}', extent=[-2.5 / zoom - x_offset, 1.5 / zoom - x_offset, -1.5 / zoom - y_offset, 1.5 / zoom - y_offset])
 plt.colorbar()
 plt.title("Mandelbrot Set")
 plt.xlabel("Re")
